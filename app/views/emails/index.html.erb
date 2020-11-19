@@ -1,0 +1,7 @@
+<ul>
+  <% Email.all.each do |email|  %>
+    <li>
+      <%= email.object %>, <%=  email.body  %>
+    </li>
+  <% end %>
+</ul>

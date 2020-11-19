@@ -1295,3 +1295,115 @@ Migrating to CreateEmails (20201119085753)
   [1m[36mActiveRecord::InternalMetadata Load (39.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(34377518426153490)[0m
   [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/neva/Bureau/THP-ruby/Fullstack web/Semaine 7/Jour 1/todolist-app/config/environment.rb:5)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (44.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Humor"], ["created_at", "2020-11-19 09:23:53.784128"], ["updated_at", "2020-11-19 09:23:53.784128"]]
+  [1m[35m (16.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Create (53.7ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at", "title", "deadline", "category_id", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2020-11-19 09:23:53.884386"], ["updated_at", "2020-11-19 09:23:53.884386"], ["title", "Recalled to Life"], ["deadline", "2021-09-29 00:00:00"], ["category_id", 4], ["image", "https://robohash.org/explicabodictaet.png?size=300x300&set=set1"]]
+  [1m[35m (73.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at", "title", "deadline", "category_id", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2020-11-19 09:23:54.020080"], ["updated_at", "2020-11-19 09:23:54.020080"], ["title", "In a Glass Darkly"], ["deadline", "2021-10-03 00:00:00"], ["category_id", 4], ["image", "https://robohash.org/praesentiumvelcum.png?size=300x300&set=set1"]]
+  [1m[35m (26.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Create (1.2ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at", "title", "deadline", "category_id", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2020-11-19 09:23:54.054945"], ["updated_at", "2020-11-19 09:23:54.054945"], ["title", "Rosemary Sutcliff"], ["deadline", "2021-07-15 00:00:00"], ["category_id", 4], ["image", "https://robohash.org/quibusdamsuscipitullam.png?size=300x300&set=set1"]]
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Biography/Autobiography"], ["created_at", "2020-11-19 09:23:54.076105"], ["updated_at", "2020-11-19 09:23:54.076105"]]
+  [1m[35m (11.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at", "title", "deadline", "category_id", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2020-11-19 09:23:54.098555"], ["updated_at", "2020-11-19 09:23:54.098555"], ["title", "Great Work of Time"], ["deadline", "2021-06-06 00:00:00"], ["category_id", 5], ["image", "https://robohash.org/laboredoloremaxime.png?size=300x300&set=set1"]]
+  [1m[35m (12.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Create (0.9ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at", "title", "deadline", "category_id", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2020-11-19 09:23:54.121024"], ["updated_at", "2020-11-19 09:23:54.121024"], ["title", "Beneath the Bleeding"], ["deadline", "2021-03-22 00:00:00"], ["category_id", 5], ["image", "https://robohash.org/atsedducimus.png?size=300x300&set=set1"]]
+  [1m[35m (11.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at", "title", "deadline", "category_id", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2020-11-19 09:23:54.146103"], ["updated_at", "2020-11-19 09:23:54.146103"], ["title", "If I Forget Thee Jerusalem"], ["deadline", "2020-12-04 00:00:00"], ["category_id", 5], ["image", "https://robohash.org/corruptidoloresprovident.png?size=300x300&set=set1"]]
+  [1m[35m (11.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Metafiction"], ["created_at", "2020-11-19 09:23:54.164577"], ["updated_at", "2020-11-19 09:23:54.164577"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at", "title", "deadline", "category_id", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2020-11-19 09:23:54.178075"], ["updated_at", "2020-11-19 09:23:54.178075"], ["title", "Far From the Madding Crowd"], ["deadline", "2021-09-29 00:00:00"], ["category_id", 6], ["image", "https://robohash.org/doloremquequiasit.png?size=300x300&set=set1"]]
+  [1m[35m (12.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at", "title", "deadline", "category_id", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2020-11-19 09:23:54.199220"], ["updated_at", "2020-11-19 09:23:54.199220"], ["title", "Ego Dominus Tuus"], ["deadline", "2021-08-22 00:00:00"], ["category_id", 6], ["image", "https://robohash.org/necessitatibuseligendicorrupti.png?size=300x300&set=set1"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Create (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at", "title", "deadline", "category_id", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2020-11-19 09:23:54.212051"], ["updated_at", "2020-11-19 09:23:54.212051"], ["title", "An Instant In The Wind"], ["deadline", "2021-04-05 00:00:00"], ["category_id", 6], ["image", "https://robohash.org/consequunturillummolestiae.png?size=300x300&set=set1"]]
+  [1m[35m (10.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmail Create (9.7ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "azure"], ["body", "Quality is not an act, it is a habit."], ["created_at", "2020-11-19 09:23:54.263581"], ["updated_at", "2020-11-19 09:23:54.263581"]]
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmail Create (0.4ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "ivory"], ["body", "Only the educated are free."], ["created_at", "2020-11-19 09:23:54.298890"], ["updated_at", "2020-11-19 09:23:54.298890"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmail Create (0.5ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "black"], ["body", "Love is composed of a single soul inhabiting two bodies."], ["created_at", "2020-11-19 09:23:54.309179"], ["updated_at", "2020-11-19 09:23:54.309179"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmail Create (0.4ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "orange"], ["body", "The virtue of justice consists in moderation, as regulated by wisdom."], ["created_at", "2020-11-19 09:23:54.321483"], ["updated_at", "2020-11-19 09:23:54.321483"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmail Create (0.5ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "taupe"], ["body", "Most people would rather give than get affection."], ["created_at", "2020-11-19 09:23:54.331238"], ["updated_at", "2020-11-19 09:23:54.331238"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmail Create (0.5ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "puce"], ["body", "Rhetoric is the art of ruling the minds of men."], ["created_at", "2020-11-19 09:23:54.343145"], ["updated_at", "2020-11-19 09:23:54.343145"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmail Create (0.4ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "lilac"], ["body", "Rhetoric is the art of ruling the minds of men."], ["created_at", "2020-11-19 09:23:54.354082"], ["updated_at", "2020-11-19 09:23:54.354082"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmail Create (0.6ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "fuchsia"], ["body", "Beware the barrenness of a busy life."], ["created_at", "2020-11-19 09:23:54.364672"], ["updated_at", "2020-11-19 09:23:54.364672"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmail Create (0.5ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "amber"], ["body", "Quality is not an act, it is a habit."], ["created_at", "2020-11-19 09:23:54.377202"], ["updated_at", "2020-11-19 09:23:54.377202"]]
+  [1m[35m (12.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmail Create (0.4ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "ochre"], ["body", "Philosophy is the highest music."], ["created_at", "2020-11-19 09:23:54.398766"], ["updated_at", "2020-11-19 09:23:54.398766"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT "emails".* FROM "emails" LIMIT $1[0m  [["LIMIT", 11]]
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/neva/Bureau/THP-ruby/Fullstack web/Semaine 7/Jour 1/todolist-app/config/environment.rb:5)
+Started GET "/emails" for 127.0.0.1 at 2020-11-19 10:36:08 +0100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1888)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms | Allocations: 3881)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <ul>
+    2:   <% @emails.each do |email|  %>
+    3:     <li>
+    4:       <%= email.object %>, <%=  email.body  %>
+    5:     </li>
+  
+app/views/emails/index.html.erb:2
+Started GET "/emails" for 127.0.0.1 at 2020-11-19 10:36:39 +0100
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.9ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:2
+  Rendered emails/index.html.erb within layouts/application (Duration: 38.0ms | Allocations: 7338)
+  [1m[36mUser Load (29.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:9
+  Rendered layouts/_navbar.html.erb (Duration: 58.3ms | Allocations: 6150)
+  Rendered layouts/_flash.html.erb (Duration: 0.6ms | Allocations: 129)
+Completed 200 OK in 8111ms (Views: 8062.2ms | ActiveRecord: 47.0ms | Allocations: 417818)
+
+

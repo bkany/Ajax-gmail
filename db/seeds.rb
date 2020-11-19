@@ -18,3 +18,10 @@ require 'faker'
   end
 end
 
+10.times do
+	email = Email.new()
+	email.object = Faker::Color.color_name
+	email.body = Faker::GreekPhilosophers.quote
+	email.save
+end
+
