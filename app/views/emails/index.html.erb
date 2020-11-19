@@ -5,3 +5,15 @@
     </li>
   <% end %>
 </ul>
+
+<br />
+
+<%= link_to "Refresh", emails_path %>
+
+<br />
+
+
+
+<%= form_tag(emails_path, method: "post") do %>
+    <%= submit_tag("Add email", class: "btn btn-info") %>
+<% end %>

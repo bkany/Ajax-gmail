@@ -1407,3 +1407,461 @@ Processing by EmailsController#index as HTML
 Completed 200 OK in 8111ms (Views: 8062.2ms | ActiveRecord: 47.0ms | Allocations: 417818)
 
 
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/neva/Bureau/THP-ruby/Fullstack web/Semaine 7/Jour 1/todolist-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/neva/Bureau/THP-ruby/Fullstack web/Semaine 7/Jour 1/todolist-app/config/environment.rb:5)
+Started GET "/emails" for 127.0.0.1 at 2020-11-19 10:55:40 +0100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.8ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:2
+  Rendered emails/index.html.erb within layouts/application (Duration: 642.0ms | Allocations: 169942)
+Completed 500 Internal Server Error in 656ms (ActiveRecord: 7.5ms | Allocations: 171943)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `emails' for #<#<Class:0x00005579e4b0b720>:0x00005579e4b08b38>
+Did you mean?  emails_url):
+     8: 
+     9: <br />
+    10: 
+    11: <%= link_to "Refresh", emails %>
+  
+app/views/emails/index.html.erb:11
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/neva/Bureau/THP-ruby/Fullstack web/Semaine 7/Jour 1/todolist-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/neva/Bureau/THP-ruby/Fullstack web/Semaine 7/Jour 1/todolist-app/config/environment.rb:5)
+Started GET "/emails" for 127.0.0.1 at 2020-11-19 10:58:17 +0100
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1450)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 3452)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <ul>
+  <% Email.all.each do |email|  %>
+    <li>
+      <%= email.object %>, <%=  email.body  %>
+    </li>
+  <% end %>
+</ul>
+
+<br />
+
+<%= link_to "Refresh", emails#index %>
+
+):
+1:    <ul>
+2:      <% Email.all.each do |email|  %>
+3:        <li>
+4:          <%= email.object %>, <%=  email.body  %>
+5:        </li>
+6:      <% end %>
+7:    </ul>
+8:    
+9:    <br />
+10:    
+11:    <%= link_to "Refresh", emails#index %>
+  
+app/views/emails/index.html.erb:14: syntax error, unexpected `end', expecting ')'
+app/views/emails/index.html.erb:14: syntax error, unexpected `end', expecting ')'
+app/views/emails/index.html.erb:14: syntax error, unexpected `end', expecting ')'
+app/views/emails/index.html.erb:14: syntax error, unexpected `end', expecting ')'
+app/views/emails/index.html.erb:14: syntax error, unexpected `end', expecting ')'
+app/views/emails/index.html.erb:14: syntax error, unexpected `end', expecting ')'
+Started GET "/emails" for 127.0.0.1 at 2020-11-19 11:00:54 +0100
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.8ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:2
+  Rendered emails/index.html.erb within layouts/application (Duration: 40.5ms | Allocations: 7416)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:9
+  Rendered layouts/_navbar.html.erb (Duration: 47.5ms | Allocations: 6124)
+  Rendered layouts/_flash.html.erb (Duration: 0.5ms | Allocations: 129)
+Completed 200 OK in 781ms (Views: 762.5ms | ActiveRecord: 17.2ms | Allocations: 332595)
+
+
+Started GET "/emails" for 127.0.0.1 at 2020-11-19 11:00:56 +0100
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:2
+  Rendered emails/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 845)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:9
+  Rendered layouts/_navbar.html.erb (Duration: 3.9ms | Allocations: 1020)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 1.1ms | Allocations: 26813)
+
+
+Started GET "/emails" for 127.0.0.1 at 2020-11-19 11:04:39 +0100
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (1.5ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:2
+  Rendered emails/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 856)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:9
+  Rendered layouts/_navbar.html.erb (Duration: 3.6ms | Allocations: 1017)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 67ms (Views: 63.6ms | ActiveRecord: 2.0ms | Allocations: 26839)
+
+
+Started GET "/emails" for 127.0.0.1 at 2020-11-19 11:10:10 +0100
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:2
+  Rendered emails/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1228)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:9
+  Rendered layouts/_navbar.html.erb (Duration: 3.8ms | Allocations: 1264)
+  Rendered layouts/_flash.html.erb (Duration: 0.5ms | Allocations: 122)
+Completed 200 OK in 71ms (Views: 68.1ms | ActiveRecord: 1.0ms | Allocations: 28820)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/neva/Bureau/THP-ruby/Fullstack web/Semaine 7/Jour 1/todolist-app/config/environment.rb:5)
+Started GET "/emails" for 127.0.0.1 at 2020-11-19 11:21:32 +0100
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (1.0ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:2
+  Rendered emails/index.html.erb within layouts/application (Duration: 23.6ms | Allocations: 4614)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:9
+  Rendered layouts/_navbar.html.erb (Duration: 26.0ms | Allocations: 6115)
+  Rendered layouts/_flash.html.erb (Duration: 0.5ms | Allocations: 129)
+Completed 200 OK in 457ms (Views: 437.6ms | ActiveRecord: 11.7ms | Allocations: 330287)
+
+
+Started POST "/emails" for 127.0.0.1 at 2020-11-19 11:21:34 +0100
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Iski5l7s8b/G3nirjUVep0cRAkG1DNpFAZRWiCGcWjVrPgK78+1ipr0hx637l1psSHcHAHdZcq5omPTJR0Byzw==", "commit"=>"Add email"}
+Completed 500 Internal Server Error in 418ms (ActiveRecord: 4.2ms | Allocations: 206087)
+
+
+  
+NoMethodError (undefined method `object=' for #<Task:0x00007f6d400893a0>
+Did you mean?  object_id):
+  
+app/controllers/emails_controller.rb:9:in `create'
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/neva/Bureau/THP-ruby/Fullstack web/Semaine 7/Jour 1/todolist-app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2020-11-19 11:22:18 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/_task_form.html.erb:18
+  Rendered layouts/_task_form.html.erb (Duration: 21.6ms | Allocations: 4004)
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/views/home/index.html.erb:9
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/home/index.html.erb:9
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/home/index.html.erb:9
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/views/home/index.html.erb:9
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/views/home/index.html.erb:9
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 6]]
+  ↳ app/views/home/index.html.erb:9
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/home/index.html.erb:25
+  Rendered home/index.html.erb within layouts/application (Duration: 104.3ms | Allocations: 20035)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:9
+  Rendered layouts/_navbar.html.erb (Duration: 27.8ms | Allocations: 5799)
+  Rendered layouts/_flash.html.erb (Duration: 0.5ms | Allocations: 129)
+Completed 200 OK in 564ms (Views: 501.2ms | ActiveRecord: 21.4ms | Allocations: 348012)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-19 11:22:37 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/_task_form.html.erb:18
+  Rendered layouts/_task_form.html.erb (Duration: 3.8ms | Allocations: 1245)
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/views/home/index.html.erb:9
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/home/index.html.erb:9
+  [1m[36mTask Load (2.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/home/index.html.erb:9
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/views/home/index.html.erb:9
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/views/home/index.html.erb:9
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 6]]
+  ↳ app/views/home/index.html.erb:9
+  [1m[36mTask Load (5.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/home/index.html.erb:25
+  Rendered home/index.html.erb within layouts/application (Duration: 31.4ms | Allocations: 7854)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:9
+  Rendered layouts/_navbar.html.erb (Duration: 3.2ms | Allocations: 1021)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 77ms (Views: 65.2ms | ActiveRecord: 10.8ms | Allocations: 33859)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-19 11:25:56 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCategory Load (3.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/_task_form.html.erb:18
+  Rendered layouts/_task_form.html.erb (Duration: 6.9ms | Allocations: 1240)
+  [1m[36mTask Load (1.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/views/home/index.html.erb:9
+  [1m[36mTask Load (2.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/home/index.html.erb:9
+  [1m[36mTask Load (1.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/home/index.html.erb:9
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/views/home/index.html.erb:9
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/views/home/index.html.erb:9
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 6]]
+  ↳ app/views/home/index.html.erb:9
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/home/index.html.erb:25
+  Rendered home/index.html.erb within layouts/application (Duration: 46.5ms | Allocations: 7849)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:9
+  Rendered layouts/_navbar.html.erb (Duration: 3.1ms | Allocations: 1017)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 102ms (Views: 89.2ms | ActiveRecord: 11.7ms | Allocations: 33838)
+
+
+Started GET "/emails" for 127.0.0.1 at 2020-11-19 11:26:02 +0100
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (1.0ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:2
+  Rendered emails/index.html.erb within layouts/application (Duration: 56.8ms | Allocations: 4286)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:9
+  Rendered layouts/_navbar.html.erb (Duration: 5.7ms | Allocations: 1067)
+  Rendered layouts/_flash.html.erb (Duration: 0.2ms | Allocations: 25)
+Completed 200 OK in 125ms (Views: 107.5ms | ActiveRecord: 9.6ms | Allocations: 30928)
+
+
+Started POST "/emails" for 127.0.0.1 at 2020-11-19 11:26:07 +0100
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nrJt0m2scXw7H0WraK6LXeP3vIMUfnhZo6OITOyCtWbXRU2PwK3iZUDg+q0efI+W7JG5wtYr0LLKryoNil6dnA==", "commit"=>"Add email"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+  [1m[36mEmail Create (0.8ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "rose"], ["body", "Pleasure in the job puts perfection in the work."], ["created_at", "2020-11-19 10:26:07.960546"], ["updated_at", "2020-11-19 10:26:07.960546"]]
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+  [1m[35m (20.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+Redirected to http://localhost:3000/emails
+Completed 302 Found in 251ms (ActiveRecord: 21.8ms | Allocations: 200898)
+
+
+Started GET "/emails" for 127.0.0.1 at 2020-11-19 11:26:08 +0100
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:2
+  Rendered emails/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1005)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:9
+  Rendered layouts/_navbar.html.erb (Duration: 3.1ms | Allocations: 1017)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+Completed 200 OK in 200ms (Views: 196.9ms | ActiveRecord: 1.0ms | Allocations: 27007)
+
+
+Started POST "/emails" for 127.0.0.1 at 2020-11-19 11:26:10 +0100
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AFY0LSwWdAGO6goBAIxYKO8+oRbKAf94U8IID45cMxZJoRRwgRfnGPUVtQd2Xlzj4FikVwhUV5M6zqpO6IAb7A==", "commit"=>"Add email"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+  [1m[36mEmail Create (0.5ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "blue"], ["body", "Love is composed of a single soul inhabiting two bodies."], ["created_at", "2020-11-19 10:26:10.171036"], ["updated_at", "2020-11-19 10:26:10.171036"]]
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+  [1m[35m (51.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+Redirected to http://localhost:3000/emails
+Completed 302 Found in 60ms (ActiveRecord: 51.9ms | Allocations: 3075)
+
+
+Started GET "/emails" for 127.0.0.1 at 2020-11-19 11:26:10 +0100
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:2
+  Rendered emails/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1020)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:9
+  Rendered layouts/_navbar.html.erb (Duration: 3.2ms | Allocations: 1016)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+Completed 200 OK in 49ms (Views: 47.0ms | ActiveRecord: 0.9ms | Allocations: 27007)
+
+
+Started POST "/emails" for 127.0.0.1 at 2020-11-19 11:26:13 +0100
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dwlnuQyADbi5Y9xU7xOOW1tdbCTBT6xxXp2sxuV3/8o+/kfkoYGeocKcY1KZwYqQVDtpZQMaBJo3kQ6Hg6vXMA==", "commit"=>"Add email"}
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+  [1m[36mEmail Create (2.4ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "amber"], ["body", "Rhetoric is the art of ruling the minds of men."], ["created_at", "2020-11-19 10:26:13.352335"], ["updated_at", "2020-11-19 10:26:13.352335"]]
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+  [1m[35m (70.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+Redirected to http://localhost:3000/emails
+Completed 302 Found in 85ms (ActiveRecord: 74.9ms | Allocations: 3073)
+
+
+Started GET "/emails" for 127.0.0.1 at 2020-11-19 11:26:13 +0100
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:2
+  Rendered emails/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1041)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:9
+  Rendered layouts/_navbar.html.erb (Duration: 4.5ms | Allocations: 1016)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+Completed 200 OK in 62ms (Views: 59.8ms | ActiveRecord: 1.2ms | Allocations: 27014)
+
+
+Started POST "/emails" for 127.0.0.1 at 2020-11-19 11:26:18 +0100
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WyopoxCMclF+UWPD7jNBwjdMtyZa4bveLPXoUpjlJOwS3Qn+vY3hSAWu3MWY4UUJOCqyZ5i0EzVF+UoT/jkMFg==", "commit"=>"Add email"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+  [1m[36mEmail Create (1.4ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "lime"], ["body", "Quality is not an act, it is a habit."], ["created_at", "2020-11-19 10:26:18.755210"], ["updated_at", "2020-11-19 10:26:18.755210"]]
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+  [1m[35m (100.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+Redirected to http://localhost:3000/emails
+Completed 302 Found in 113ms (ActiveRecord: 103.1ms | Allocations: 3058)
+
+
+Started GET "/emails" for 127.0.0.1 at 2020-11-19 11:26:18 +0100
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:2
+  Rendered emails/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1056)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:9
+  Rendered layouts/_navbar.html.erb (Duration: 5.8ms | Allocations: 1016)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+Completed 200 OK in 57ms (Views: 55.0ms | ActiveRecord: 1.1ms | Allocations: 27038)
+
+
+Started POST "/emails" for 127.0.0.1 at 2020-11-19 11:26:20 +0100
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b+SK9WyALTRf0k8fDL3sdtTfgmhFE0604pX0zD7gT+ImE6qowYG+LSQt8Bl6b+i927mHKYdG5l+LmVaNWDxnGA==", "commit"=>"Add email"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+  [1m[36mEmail Create (0.5ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "gray"], ["body", "The secret to humor is surprise."], ["created_at", "2020-11-19 10:26:20.085060"], ["updated_at", "2020-11-19 10:26:20.085060"]]
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+  [1m[35m (21.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+Redirected to http://localhost:3000/emails
+Completed 302 Found in 30ms (ActiveRecord: 22.5ms | Allocations: 3050)
+
+
+Started GET "/emails" for 127.0.0.1 at 2020-11-19 11:26:20 +0100
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.9ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:2
+  Rendered emails/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1074)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:9
+  Rendered layouts/_navbar.html.erb (Duration: 3.9ms | Allocations: 1016)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+Completed 200 OK in 56ms (Views: 53.4ms | ActiveRecord: 1.7ms | Allocations: 27063)
+
+
+Started POST "/emails" for 127.0.0.1 at 2020-11-19 11:26:21 +0100
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wXETXYxmBFTIFYH93ofd+sib8E/9w5dqdSbOvd0eCX+IhjMAIWeXTbPqPvuoVdkxx/31Dj+WP4EcKmz8u8IhhQ==", "commit"=>"Add email"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+  [1m[36mEmail Create (0.6ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "viridian"], ["body", "Most people would rather give than get affection."], ["created_at", "2020-11-19 10:26:21.106314"], ["updated_at", "2020-11-19 10:26:21.106314"]]
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+  [1m[35m (22.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+Redirected to http://localhost:3000/emails
+Completed 302 Found in 31ms (ActiveRecord: 23.1ms | Allocations: 3042)
+
+
+Started GET "/emails" for 127.0.0.1 at 2020-11-19 11:26:21 +0100
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.9ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:2
+  Rendered emails/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1092)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:9
+  Rendered layouts/_navbar.html.erb (Duration: 4.0ms | Allocations: 1016)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+Completed 200 OK in 52ms (Views: 49.2ms | ActiveRecord: 1.3ms | Allocations: 27083)
+
+
+Started POST "/emails" for 127.0.0.1 at 2020-11-19 11:26:22 +0100
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cq1M4GUVttrEjHECRYfQpDBMTVSN52C0QjZsBnFyv25DWmy9yBQlw79zzgQzVdRvPypIFU+yyF8rOs5HF66XlA==", "commit"=>"Add email"}
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+  [1m[36mEmail Create (1.3ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "burgundy"], ["body", "Dignity does not consist in possessing honors, but in deserving them."], ["created_at", "2020-11-19 10:26:22.214167"], ["updated_at", "2020-11-19 10:26:22.214167"]]
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+  [1m[35m (25.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:12:in `create'
+Redirected to http://localhost:3000/emails
+Completed 302 Found in 36ms (ActiveRecord: 28.1ms | Allocations: 3046)
+
+
+Started GET "/emails" for 127.0.0.1 at 2020-11-19 11:26:22 +0100
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (1.7ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:2
+  Rendered emails/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1110)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:9
+  Rendered layouts/_navbar.html.erb (Duration: 3.4ms | Allocations: 1016)
+  Rendered layouts/_flash.html.erb (Duration: 0.2ms | Allocations: 24)
+Completed 200 OK in 50ms (Views: 46.1ms | ActiveRecord: 2.1ms | Allocations: 27092)
+
+
