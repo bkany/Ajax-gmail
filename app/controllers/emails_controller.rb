@@ -1,7 +1,7 @@
 class EmailsController < ApplicationController
 
   def new
-    @emails = Email.all
+    @emails = Email.all.find(params[:id])
   end
 
   def create
@@ -25,6 +25,17 @@ class EmailsController < ApplicationController
     end
     
   end
+  
+  def show
+  	@email = Email.all.find(params[:id])
+  end
 
+	def destroy
+	  @email.destroy
+    respond_to do |format|
+      format.html { redirect_to emails_path }
+      format.js { }
+    end
+	end
 
 end

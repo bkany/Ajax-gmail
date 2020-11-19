@@ -1,19 +1,27 @@
-<ul>
-  <% Email.all.each do |email|  %>
-    <li>
-      <%= email.object %>, <%=  email.body  %>
-    </li>
+<table id="gmail_list">
+	<% Email.all.each do |email|  %>
+	<tr>
+		<td>
+      <%= email.object %>
+    </td>
+    <td>
+    	<%= link_to "Voir l'email", email_path(email), class: "btn btn-info", remote: true %>
+    </td>
+    <td id="email-show<%= email.id %>">
+    
+    </td>
+  </tr>
   <% end %>
-</ul>
-
-<br />
-
-<%= link_to "Refresh", emails_path %>
+</table>
 
 <br />
 
 
 
-<%= form_tag(emails_path, method: "post") do %>
+<br />
+
+
+
+<%= form_tag(emails_path, method: "post", remote: true) do %>
     <%= submit_tag("Add email", class: "btn btn-info") %>
 <% end %>
